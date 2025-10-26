@@ -37,6 +37,7 @@ jobs:
     uses: CaddyGlow/homebrew-packages/.github/workflows/python-test.yml@main
     with:
       ref: ${{ inputs.ref || '' }}
+      python_version: '3.11'
 
   build:
     needs: [test]
@@ -51,6 +52,7 @@ jobs:
       binary_name: ccproxy
       assets: '["README.md", "LICENSE"]'
       target_preset: ${{ inputs.target_preset || 'all' }}
+      python_version: '3.11'
 
   release:
     needs: [build]

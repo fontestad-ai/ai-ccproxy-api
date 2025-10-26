@@ -2,8 +2,8 @@
 # This builds a standalone binary executable for ccproxy
 
 def make_exe():
-    # Get the Python distribution to use
-    dist = default_python_distribution(python_version="3.12")
+    # Get the Python distribution to use (project requires >=3.11)
+    dist = default_python_distribution(python_version="3.11")
 
     # Define the packaging policy
     policy = dist.make_python_packaging_policy()
