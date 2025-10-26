@@ -48,7 +48,7 @@ def make_exe():
 
     # Install the application and dependencies
     # Use pip install to get the current package and all dependencies
-    exe.add_python_resources(exe.pip_install(["-e", "."]))
+    exe.add_python_resources(exe.pip_install(["."]))
 
     return exe
 
